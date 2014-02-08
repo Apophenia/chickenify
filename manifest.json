@@ -1,0 +1,20 @@
+{
+    "name": "Chickenify",
+    "version": "0.1",
+    "manifest_version": 2,
+    "description": "Chicken chicken chicken chicken-chicken, chicken chicken.",
+    "browser_action": {
+        "default_icon": "chicken.png"
+    },
+    "background": {"scripts": ["background.js"]},
+    "content_scripts": [
+        {
+            "matches": ["http://*/*", "https://*/*"],
+            "js": ["translate.js"],
+            "run_at": "document_end"
+        }
+    ],
+    "permissions": [
+	"storage"
+	]
+}
