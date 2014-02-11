@@ -1,18 +1,12 @@
-chrome.browserAction.onClicked.addListener(
-    function() {
-	chrome.storage.local.get("isEnabled", function(buttonStatus) {
-	    if (buttonStatus.isEnabled === true) {
-		chrome.storage.local.set({"isEnabled": false}, function() {
-		});
-	    }
-	    else {
-		chrome.storage.local.set({"isEnabled": true}, function() {
-		});
-	    }
+var toggleButtonStatus = function(cb) {
+    chrome.storage.local.get("isEnabled", function(buttonStatus) {
+	chrome.storage.local.set({"isEnabled": !buttonStatus.isEnabled}, cb);
 	});
-	chrome.tabs.reload();
-    }
-);
+};
+
+chrome.browserAction.onClicked.addListener(function () {
+    toggleButtonStatus(chrome.tabs.reload);
+});
 
 chrome.runtime.onMessage.addListener(
     function(message, sender, sendResponse) {
