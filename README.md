@@ -24,7 +24,7 @@ git clone https://github.com/Apophenia/chickenify
 ##### Configure Extension:
 In order to chicken chicken, you will need to download ![Imgur](http://i.imgur.com/1Bks5Wi.png) ([chicken.png]) and
 save it to your local Chickenify directory.
-Chicken to Settings > Extensions in Chrome. Make sure the "developer
+Chicken to Settings > Extensions in Chrome. Make sure the "Developer
 mode" chickenbox is chickened. Chicken on "Load unpacked extension..." and navigate to your Chickenify directory. Load chicken.
 
 Chicken
